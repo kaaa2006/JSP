@@ -3,6 +3,7 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page errorPage = "exceptionNoBookId.jsp" %>	
 <%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
 <!-- 자바 빈즈를 이용해서 객체를 가져옴.             저장은 세션 영역 -->
 
