@@ -28,7 +28,7 @@
 			<div class="mb-3 row">
 				<label class="col-sm-2"><fmt:message key="bookId" /></label>
 				<div class="col-sm-3">
-					<input type="text" name="bookId" id="bookId" class="form-control" >
+					<input type="text" name="Id" id="Id" class="form-control" >
 				</div>
 			</div>
 			<div class="mb-3 row">
@@ -43,16 +43,11 @@
 					<input type="text" name="unitPrice" id="unitPrice" class="form-control" >
 				</div>
 			</div>
+			
 			<div class="mb-3 row">
-				<label class="col-sm-2"><fmt:message key="author" /></label>
+				<label class="col-sm-2"><fmt:message key="origin" /></label>
 				<div class="col-sm-3">
-					<input type="text" name="author" class="form-control">
-				</div>
-			</div>
-			<div class="mb-3 row">
-				<label class="col-sm-2"><fmt:message key="publisher" /></label>
-				<div class="col-sm-3">
-					<input type="text" name="publisher" class="form-control">
+					<input type="text" name="origin" class="form-control">
 				</div>
 			</div>
 			<div class="mb-3 row">
@@ -81,17 +76,10 @@
 					<input type="text" name="unitsInStock" 1 id = "unitsInStock" class="form-control" >
 				</div>
 			</div>
-			<div class="mb-3 row">
-				<label class="col-sm-2"><fmt:message key="condition" /></label>
-				<div class="col-sm-5">
-					<input type="radio" name="condition" value="New " ><fmt:message key="condition_New" />
-					<input type="radio" name="condition" value="Old" > <fmt:message key="condition_Old" /> 
-					<input type="radio" name="condition" value="EBook" ><fmt:message key="condition_Ebook" />
-				</div>				
-			</div>		
+		
 			
 			<div class="mb-3 row">
-				<label class="col-sm-2"><fmt:message key="bookImage" /></label>
+				<label class="col-sm-2"><fmt:message key="coffeeImage" /></label>
 				<div class="col-sm-5">
 					<input type="file" name="bookImage" class="form-control">
 				</div>

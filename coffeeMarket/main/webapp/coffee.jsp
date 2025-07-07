@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="dto.Coffee"%>
 <%@ page import="dao.CoffeeRepository"%>
-<%@ page errorPage="exceptionNoCoffeeId.jsp"%>
+
 <%@ page import="java.sql.*"%>
 
 <html>
@@ -38,7 +38,7 @@
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
-		String sql = "select * from coffee where id = ?";
+		String sql = "select * from COFFEE where ID = ?";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, Id);
 		rs = pstmt.executeQuery();
@@ -46,32 +46,31 @@
 		%>
 		<div class="row align-items-md-stretch">
 			<div class="col-md-5">
-				<img src="./resources/images/<%=rs.getString("filename")%>"
+				<img src="./resources/images/<%=rs.getString("FILENAME")%>"
 					style="width: 70%">
 			</div>
 			<div class="col-md-6">
 				<h3>
-					<b><%=rs.getString("name")%></b>
+					<b><%=rs.getString("NAME")%></b>
 				</h3>
-				<p><%=rs.getString("description")%>%>
+				<p><%=rs.getString("DESCRIPTION")%>%>
 				<p>
-					<b>도서코드 : </b><span class="badge text-bg-danger"> <%=rs.getString("id")%></span>
+					<b>도서코드 : </b><span class="badge text-bg-danger"> <%=rs.getString("ID")%></span>
 					<b>원산지</b> :
-					<%=rs.getString("arigin")%>
+					<%=rs.getString("ORIGIN")%>
 				<p>
 					<b>출판일</b> :
-					<%=rs.getString("releaseDate")%>
+					<%=rs.getString("RELEASEDATE")%>
 				<p>
-					<b>재고수</b> :
-					<%=rs.getString("unitsInStock")%>
-				<h4><%=rs.getString("unitPrice")%>원
+				
+				<h4><%=rs.getString("UNITPRICE")%>원
 				</h4>
 				<p>
 				<form name="addForm"
-					action="./addCart.jsp?id=<%=rs.getString("id")%>" method="post">
+					action="./addCart.jsp?id=<%=rs.getString("ID")%>" method="post">
 					<a href="#" class="btn btn-info" onclick="addToCart()"> 원두
 						주문&raquo;</a> <a href="./cart.jsp" class="btn btn-warning">
-						장바구니&raquo;</a> <a href="./coffees.jsp" class="btn btn-secondary">
+						장바구니&raquo;</a> <a href="./coffes.jsp" class="btn btn-secondary">
 						커피 목록&raquo;</a>
 				</form>
 			</div>

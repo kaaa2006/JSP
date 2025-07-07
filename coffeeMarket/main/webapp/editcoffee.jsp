@@ -8,7 +8,7 @@
 <title>원두 편집</title>
 <script type="text/javascript">
 	function deleteConfirm(id) {
-		if (confirm("해당 도서를 삭제합니다!!") == true)
+		if (confirm("해당 커피를 삭제합니다!!") == true)
 			location.href = "./deleteCoffee.jsp?id=" + id;
 		else
 			return;
